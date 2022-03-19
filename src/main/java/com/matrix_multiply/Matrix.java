@@ -50,7 +50,6 @@ public class Matrix extends Thread {
             };
             threads[i].start();
         }
-
         try {
             for (Thread thread : threads) {
                 thread.join();
