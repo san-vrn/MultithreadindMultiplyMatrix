@@ -1,10 +1,9 @@
-import com.matrix_multiply.Matrix;
-import com.matrix_multiply.MultiplyMatrix;
+import com.bank.system.Bank;
 
 public class Main {
 
         public static void main(String[] args) {
-            int[][] matrixA = Matrix.randomMatrix(1000, 10);
+            /*int[][] matrixA = Matrix.randomMatrix(1000, 10);
             int[][] matrixB = Matrix.randomMatrix(1000, 10);
             MultiplyMatrix multiply = new MultiplyMatrix(matrixA, matrixB);
 
@@ -16,10 +15,14 @@ public class Main {
             Matrix.showMatrix(matrixA, matrixA.length);
             System.out.println("\nMatrix B:");
             Matrix.showMatrix(matrixB, matrixB.length);
-            multiply.DisplayTime();
+            multiply.DisplayTime();*/
 
 
-
-
+            Bank bank = new Bank();
+            try {
+                bank.start();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 }
